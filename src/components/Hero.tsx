@@ -1,22 +1,17 @@
 import { Button } from "@/components/ui/button";
 import { Shield, CheckCircle, Star } from "lucide-react";
 import heroImage from "@/assets/hero-office.jpg";
-
 const Hero = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
-    element?.scrollIntoView({ behavior: "smooth" });
+    element?.scrollIntoView({
+      behavior: "smooth"
+    });
   };
-
-  return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+  return <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
-        <img
-          src={heroImage}
-          alt="Professional office entrance"
-          className="w-full h-full object-cover"
-        />
+        <img src={heroImage} alt="Professional office entrance" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-hero"></div>
       </div>
 
@@ -39,17 +34,23 @@ const Hero = () => {
             </div>
           </div>
 
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in-up" style={{
+          animationDelay: '0.2s'
+        }}>
             Professional Mat Solutions for{" "}
             <span className="text-golden">Kalgoorlie Businesses</span>
           </h1>
 
-          <p className="text-xl md:text-2xl mb-8 text-primary-foreground/90 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+          <p className="text-xl md:text-2xl mb-8 text-primary-foreground/90 animate-fade-in-up" style={{
+          animationDelay: '0.4s'
+        }}>
             Keep your premises clean, safe and professional with our commercial floor mat hire and cleaning services.
           </p>
 
           {/* Key Benefits */}
-          <div className="grid md:grid-cols-3 gap-6 mb-10 animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
+          <div className="grid md:grid-cols-3 gap-6 mb-10 animate-fade-in-up" style={{
+          animationDelay: '0.6s'
+        }}>
             <div className="bg-background/10 backdrop-blur-sm rounded-lg p-4">
               <h3 className="font-semibold text-golden mb-2">Trap Dirt & Debris</h3>
               <p className="text-sm text-primary-foreground/80">
@@ -71,27 +72,19 @@ const Hero = () => {
           </div>
 
           {/* CTAs */}
-          <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
-            <Button
-              variant="golden"
-              size="lg"
-              onClick={() => scrollToSection("contact")}
-              className="min-w-[200px]"
-            >
+          <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 animate-fade-in-up" style={{
+          animationDelay: '0.8s'
+        }}>
+            <Button variant="golden" size="lg" onClick={() => scrollToSection("contact")} className="min-w-[200px]">
               Get Your Quote Today
             </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              onClick={() => scrollToSection("services")}
-              className="min-w-[200px] border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
-            >
-              View Services
-            </Button>
+            
           </div>
 
           {/* Pricing Highlight */}
-          <div className="mt-10 text-center animate-fade-in-up" style={{ animationDelay: '1s' }}>
+          <div className="mt-10 text-center animate-fade-in-up" style={{
+          animationDelay: '1s'
+        }}>
             <p className="text-lg">
               <span className="text-golden font-semibold">Mat hire from $7.77/week</span>
               <span className="mx-4">•</span>
@@ -103,12 +96,8 @@ const Hero = () => {
 
       {/* Scroll Indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border-2 border-primary-foreground/50 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-golden rounded-full mt-2"></div>
-        </div>
+        
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
