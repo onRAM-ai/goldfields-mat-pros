@@ -1,15 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Recycle, Sparkles, Calendar, DollarSign, Shield, Truck, Bed } from "lucide-react";
+import { Recycle, Sparkles, Calendar, DollarSign, Shield, Truck } from "lucide-react";
 import logoMatsImage from "@/assets/logo-mats.jpg";
+
 const Services = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
-    element?.scrollIntoView({
-      behavior: "smooth"
-    });
+    element?.scrollIntoView({ behavior: "smooth" });
   };
-  return <section id="services" className="py-20 bg-background">
+
+  return (
+    <section id="services" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
@@ -24,14 +25,14 @@ const Services = () => {
           </div>
 
           {/* Main Services */}
-          <div className="grid lg:grid-cols-3 gap-8 mb-16">
+          <div className="grid lg:grid-cols-2 gap-8 mb-16">
             {/* Mat Hire Service */}
             <Card className="border-border shadow-professional hover:shadow-golden transition-all duration-300">
               <CardHeader className="text-center">
                 <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
                   <Recycle className="w-8 h-8 text-primary-foreground" />
                 </div>
-                <CardTitle className="text-2xl text-primary-blue">Commercial Mat Hire from</CardTitle>
+                <CardTitle className="text-2xl text-primary-blue">Commercial Mat Hire</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="text-center mb-6">
@@ -57,7 +58,11 @@ const Services = () => {
                   </li>
                 </ul>
                 <div className="pt-4">
-                  <Button variant="professional" className="w-full" onClick={() => scrollToSection("contact")}>
+                  <Button
+                    variant="professional"
+                    className="w-full"
+                    onClick={() => scrollToSection("contact")}
+                  >
                     Get Mat Hire Quote
                   </Button>
                 </div>
@@ -96,47 +101,12 @@ const Services = () => {
                   </li>
                 </ul>
                 <div className="pt-4">
-                  <Button variant="golden" className="w-full" onClick={() => scrollToSection("contact")}>
+                  <Button
+                    variant="golden"
+                    className="w-full"
+                    onClick={() => scrollToSection("contact")}
+                  >
                     Get Cleaning Quote
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Bedding Washing Service */}
-            <Card className="border-border shadow-professional hover:shadow-golden transition-all duration-300">
-              <CardHeader className="text-center">
-                <div className="w-16 h-16 bg-gradient-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Bed className="w-8 h-8 text-professional-black" />
-                </div>
-                <CardTitle className="text-2xl text-primary-blue">Bedding Washing</CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="text-center mb-6">
-                  <div className="text-3xl font-bold text-golden">$25</div>
-                  <div className="text-muted-foreground">per item</div>
-                </div>
-                <ul className="space-y-3">
-                  <li className="flex items-start space-x-3">
-                    <Sparkles className="w-5 h-5 text-golden mt-0.5 flex-shrink-0" />
-                    <span className="text-muted-foreground">Professional bedding laundry service</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <Shield className="w-5 h-5 text-golden mt-0.5 flex-shrink-0" />
-                    <span className="text-muted-foreground">Commercial grade cleaning products</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <Truck className="w-5 h-5 text-golden mt-0.5 flex-shrink-0" />
-                    <span className="text-muted-foreground">Collection and delivery service</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <Calendar className="w-5 h-5 text-golden mt-0.5 flex-shrink-0" />
-                    <span className="text-muted-foreground">Scheduled weekly or bi-weekly service</span>
-                  </li>
-                </ul>
-                <div className="pt-4">
-                  <Button variant="professional" className="w-full" onClick={() => scrollToSection("contact")}>
-                    Get Bedding Quote
                   </Button>
                 </div>
               </CardContent>
@@ -192,7 +162,11 @@ const Services = () => {
             </div>
 
             <div className="relative">
-              <img src={logoMatsImage} alt="Professional logo mats" className="w-full h-[400px] object-cover rounded-lg shadow-professional" />
+              <img
+                src={logoMatsImage}
+                alt="Professional logo mats"
+                className="w-full h-[400px] object-cover rounded-lg shadow-professional"
+              />
               <div className="absolute inset-0 bg-gradient-primary/5 rounded-lg"></div>
             </div>
           </div>
@@ -207,16 +181,26 @@ const Services = () => {
               and recommend the perfect mat solution for your business.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-              <Button variant="golden" size="lg" onClick={() => scrollToSection("contact")}>
+              <Button
+                variant="golden"
+                size="lg"
+                onClick={() => scrollToSection("contact")}
+              >
                 Get Free Quote
               </Button>
-              <Button variant="outline" size="lg" onClick={() => window.open("tel:+61890214000", "_self")}>
+              <Button
+                variant="outline"
+                size="lg"
+                onClick={() => window.open("tel:+61890214000", "_self")}
+              >
                 Call (08) 9021 4000
               </Button>
             </div>
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default Services;
