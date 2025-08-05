@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Recycle, Sparkles, Calendar, DollarSign, Shield, Truck } from "lucide-react";
+import { Recycle, Sparkles, Calendar, DollarSign, Shield, Truck, Bed } from "lucide-react";
 import logoMatsImage from "@/assets/logo-mats.jpg";
 const Services = () => {
   const scrollToSection = (sectionId: string) => {
@@ -24,7 +24,7 @@ const Services = () => {
           </div>
 
           {/* Main Services */}
-          <div className="grid lg:grid-cols-2 gap-8 mb-16">
+          <div className="grid lg:grid-cols-3 gap-8 mb-16">
             {/* Mat Hire Service */}
             <Card className="border-border shadow-professional hover:shadow-golden transition-all duration-300">
               <CardHeader className="text-center">
@@ -98,6 +98,45 @@ const Services = () => {
                 <div className="pt-4">
                   <Button variant="golden" className="w-full" onClick={() => scrollToSection("contact")}>
                     Get Cleaning Quote
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Bedding Washing Service */}
+            <Card className="border-border shadow-professional hover:shadow-golden transition-all duration-300">
+              <CardHeader className="text-center">
+                <div className="w-16 h-16 bg-gradient-accent rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Bed className="w-8 h-8 text-professional-black" />
+                </div>
+                <CardTitle className="text-2xl text-primary-blue">Bedding Washing</CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <div className="text-center mb-6">
+                  <div className="text-3xl font-bold text-golden">$25</div>
+                  <div className="text-muted-foreground">per item</div>
+                </div>
+                <ul className="space-y-3">
+                  <li className="flex items-start space-x-3">
+                    <Sparkles className="w-5 h-5 text-golden mt-0.5 flex-shrink-0" />
+                    <span className="text-muted-foreground">Professional bedding laundry service</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <Shield className="w-5 h-5 text-golden mt-0.5 flex-shrink-0" />
+                    <span className="text-muted-foreground">Commercial grade cleaning products</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <Truck className="w-5 h-5 text-golden mt-0.5 flex-shrink-0" />
+                    <span className="text-muted-foreground">Collection and delivery service</span>
+                  </li>
+                  <li className="flex items-start space-x-3">
+                    <Calendar className="w-5 h-5 text-golden mt-0.5 flex-shrink-0" />
+                    <span className="text-muted-foreground">Scheduled weekly or bi-weekly service</span>
+                  </li>
+                </ul>
+                <div className="pt-4">
+                  <Button variant="professional" className="w-full" onClick={() => scrollToSection("contact")}>
+                    Get Bedding Quote
                   </Button>
                 </div>
               </CardContent>
