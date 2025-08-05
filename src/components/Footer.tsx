@@ -1,15 +1,13 @@
 import { Phone, Mail, MapPin } from "lucide-react";
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
-    element?.scrollIntoView({ behavior: "smooth" });
+    element?.scrollIntoView({
+      behavior: "smooth"
+    });
   };
-
-  return (
-    <footer className="bg-primary-blue text-primary-foreground">
+  return <footer className="bg-primary-blue text-primary-foreground">
       <div className="container mx-auto px-4 py-12">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Company Info */}
@@ -47,28 +45,16 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold text-lg mb-4">Quick Links</h3>
             <nav className="space-y-3">
-              <button
-                onClick={() => scrollToSection("home")}
-                className="block text-primary-foreground/80 hover:text-golden transition-colors"
-              >
+              <button onClick={() => scrollToSection("home")} className="block text-primary-foreground/80 hover:text-golden transition-colors">
                 Home
               </button>
-              <button
-                onClick={() => scrollToSection("about")}
-                className="block text-primary-foreground/80 hover:text-golden transition-colors"
-              >
+              <button onClick={() => scrollToSection("about")} className="block text-primary-foreground/80 hover:text-golden transition-colors">
                 About
               </button>
-              <button
-                onClick={() => scrollToSection("services")}
-                className="block text-primary-foreground/80 hover:text-golden transition-colors"
-              >
+              <button onClick={() => scrollToSection("services")} className="block text-primary-foreground/80 hover:text-golden transition-colors">
                 Services
               </button>
-              <button
-                onClick={() => scrollToSection("contact")}
-                className="block text-primary-foreground/80 hover:text-golden transition-colors"
-              >
+              <button onClick={() => scrollToSection("contact")} className="block text-primary-foreground/80 hover:text-golden transition-colors">
                 Contact
               </button>
             </nav>
@@ -83,7 +69,7 @@ const Footer = () => {
                 <div className="text-sm text-golden">From $7.77/week</div>
               </div>
               <div className="text-primary-foreground/80">
-                <div className="font-medium">Logo Cleaning</div>
+                <div className="font-medium">Logo Mat Cleaning</div>
                 <div className="text-sm text-golden">From $66</div>
               </div>
               <div className="text-primary-foreground/80">
@@ -108,8 +94,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
