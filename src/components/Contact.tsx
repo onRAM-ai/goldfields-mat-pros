@@ -6,9 +6,10 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
-
 const Contact = () => {
-  const { toast } = useToast();
+  const {
+    toast
+  } = useToast();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -17,13 +18,12 @@ const Contact = () => {
     service: "",
     message: ""
   });
-
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // In a real app, this would submit to a backend
     toast({
       title: "Quote Request Sent!",
-      description: "We'll contact you within 24 hours with your custom quote.",
+      description: "We'll contact you within 24 hours with your custom quote."
     });
     setFormData({
       name: "",
@@ -34,16 +34,13 @@ const Contact = () => {
       message: ""
     });
   };
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
     });
   };
-
-  return (
-    <section id="contact" className="py-20 bg-secondary">
+  return <section id="contact" className="py-20 bg-secondary">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
@@ -71,63 +68,28 @@ const Contact = () => {
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <Label htmlFor="name">Full Name *</Label>
-                      <Input
-                        id="name"
-                        name="name"
-                        value={formData.name}
-                        onChange={handleChange}
-                        required
-                        placeholder="Your full name"
-                      />
+                      <Input id="name" name="name" value={formData.name} onChange={handleChange} required placeholder="Your full name" />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="email">Email Address *</Label>
-                      <Input
-                        id="email"
-                        name="email"
-                        type="email"
-                        value={formData.email}
-                        onChange={handleChange}
-                        required
-                        placeholder="your@email.com"
-                      />
+                      <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} required placeholder="your@email.com" />
                     </div>
                   </div>
 
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <Label htmlFor="phone">Phone Number</Label>
-                      <Input
-                        id="phone"
-                        name="phone"
-                        type="tel"
-                        value={formData.phone}
-                        onChange={handleChange}
-                        placeholder="(08) 9XXX XXXX"
-                      />
+                      <Input id="phone" name="phone" type="tel" value={formData.phone} onChange={handleChange} placeholder="(08) 9XXX XXXX" />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="business">Business Name</Label>
-                      <Input
-                        id="business"
-                        name="business"
-                        value={formData.business}
-                        onChange={handleChange}
-                        placeholder="Your business name"
-                      />
+                      <Input id="business" name="business" value={formData.business} onChange={handleChange} placeholder="Your business name" />
                     </div>
                   </div>
 
                   <div className="space-y-2">
                     <Label htmlFor="service">Service Interested In *</Label>
-                    <select
-                      id="service"
-                      name="service"
-                      value={formData.service}
-                      onChange={handleChange}
-                      required
-                      className="w-full px-3 py-2 border border-input rounded-md bg-background"
-                    >
+                    <select id="service" name="service" value={formData.service} onChange={handleChange} required className="w-full px-3 py-2 border border-input rounded-md bg-background">
                       <option value="">Select a service</option>
                       <option value="mat-hire">Commercial Mat Hire</option>
                       <option value="logo-cleaning">Logo Mat Cleaning</option>
@@ -138,22 +100,10 @@ const Contact = () => {
 
                   <div className="space-y-2">
                     <Label htmlFor="message">Additional Details</Label>
-                    <Textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleChange}
-                      placeholder="Tell us about your requirements, location size, current challenges, etc."
-                      rows={4}
-                    />
+                    <Textarea id="message" name="message" value={formData.message} onChange={handleChange} placeholder="Tell us about your requirements, location size, current challenges, etc." rows={4} />
                   </div>
 
-                  <Button
-                    type="submit"
-                    variant="golden"
-                    size="lg"
-                    className="w-full"
-                  >
+                  <Button type="submit" variant="golden" size="lg" className="w-full">
                     Send Quote Request
                   </Button>
                 </form>
@@ -209,8 +159,8 @@ const Contact = () => {
                       <h4 className="font-semibold text-primary-blue mb-1">Business Hours</h4>
                       <div className="text-muted-foreground space-y-1">
                         <p>Monday - Friday: 8:00 AM - 5:00 PM</p>
-                        <p>Saturday: 9:00 AM - 2:00 PM</p>
-                        <p>Sunday: Closed</p>
+                        
+                        
                       </div>
                     </div>
                   </div>
@@ -226,12 +176,7 @@ const Contact = () => {
                   <p className="text-muted-foreground mb-4">
                     Speak directly with our team for urgent requirements or immediate quotes.
                   </p>
-                  <Button
-                    variant="professional"
-                    size="lg"
-                    className="w-full"
-                    onClick={() => window.open("tel:+61890214000", "_self")}
-                  >
+                  <Button variant="professional" size="lg" className="w-full" onClick={() => window.open("tel:+61890214000", "_self")}>
                     Call Now: (08) 9021 4000
                   </Button>
                 </CardContent>
@@ -265,8 +210,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Contact;
