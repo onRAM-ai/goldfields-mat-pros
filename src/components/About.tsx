@@ -15,7 +15,7 @@ const About = () => {
           {/* Section Header */}
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-primary-blue mb-4">
-              About Goldfields Commercial Mat Hire
+              About Goldfields Commercial Floor Mats
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
               Your trusted local partner for professional floor mat solutions in Kalgoorlie, 

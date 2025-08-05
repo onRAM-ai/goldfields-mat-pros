@@ -98,7 +98,7 @@ const Footer = () => {
         <div className="border-t border-primary-foreground/20 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-primary-foreground/80 text-sm">
-              © {currentYear} Goldfields Commercial Mat Hire. All rights reserved.
+              © {currentYear} Goldfields Commercial Floor Mats. All rights reserved.
             </div>
             <div className="flex items-center space-x-6 text-sm text-primary-foreground/80">
               <span>Proudly serving Kalgoorlie businesses</span>
