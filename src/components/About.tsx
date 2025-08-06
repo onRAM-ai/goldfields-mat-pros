@@ -1,15 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { MapPin, Users, Clock, Award } from "lucide-react";
 import cleaningImage from "@/assets/cleaning-service.jpg";
-
 const About = () => {
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
-    element?.scrollIntoView({ behavior: "smooth" });
+    element?.scrollIntoView({
+      behavior: "smooth"
+    });
   };
-
-  return (
-    <section id="about" className="py-20 bg-secondary">
+  return <section id="about" className="py-20 bg-secondary">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
@@ -49,16 +48,8 @@ const About = () => {
                   <div className="text-2xl font-bold text-primary-blue">Local</div>
                   <div className="text-sm text-muted-foreground">Kalgoorlie Based</div>
                 </div>
-                <div className="text-center p-4 bg-background rounded-lg shadow-sm">
-                  <Users className="w-8 h-8 text-golden mx-auto mb-2" />
-                  <div className="text-2xl font-bold text-primary-blue">100+</div>
-                  <div className="text-sm text-muted-foreground">Happy Clients</div>
-                </div>
-                <div className="text-center p-4 bg-background rounded-lg shadow-sm">
-                  <Clock className="w-8 h-8 text-golden mx-auto mb-2" />
-                  <div className="text-2xl font-bold text-primary-blue">24/7</div>
-                  <div className="text-sm text-muted-foreground">Service Support</div>
-                </div>
+                
+                
                 <div className="text-center p-4 bg-background rounded-lg shadow-sm">
                   <Award className="w-8 h-8 text-golden mx-auto mb-2" />
                   <div className="text-2xl font-bold text-primary-blue">5★</div>
@@ -97,29 +88,19 @@ const About = () => {
                 </div>
               </div>
 
-              <Button
-                variant="professional"
-                size="lg"
-                onClick={() => scrollToSection("services")}
-              >
+              <Button variant="professional" size="lg" onClick={() => scrollToSection("services")}>
                 Explore Our Services
               </Button>
             </div>
 
             {/* Image */}
             <div className="relative">
-              <img
-                src={cleaningImage}
-                alt="Professional cleaning service"
-                className="w-full h-[500px] object-cover rounded-lg shadow-professional"
-              />
+              <img src={cleaningImage} alt="Professional cleaning service" className="w-full h-[500px] object-cover rounded-lg shadow-professional" />
               <div className="absolute inset-0 bg-gradient-primary/10 rounded-lg"></div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;
