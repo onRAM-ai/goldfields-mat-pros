@@ -19,20 +19,7 @@ const Hero = () => {
       <div className="relative z-10 container mx-auto px-4 py-20">
         <div className="max-w-4xl mx-auto text-center text-primary-foreground">
           {/* Trust Indicators */}
-          <div className="flex items-center justify-center space-x-6 mb-8 animate-fade-in-up">
-            <div className="flex items-center space-x-2">
-              <Shield className="w-5 h-5 text-golden" />
-              <span className="text-sm">Kalgoorlie Local</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <Star className="w-5 h-5 text-golden" />
-              <span className="text-sm">Professional Service</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <CheckCircle className="w-5 h-5 text-golden" />
-              <span className="text-sm">Reliable Solution</span>
-            </div>
-          </div>
+          
 
           <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in-up" style={{
           animationDelay: '0.2s'
