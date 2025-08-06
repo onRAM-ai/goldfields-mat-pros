@@ -16,7 +16,7 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 py-20">
+      <div className="relative z-10 container mx-auto px-4 py-[100px]">
         <div className="max-w-4xl mx-auto text-center text-primary-foreground">
           {/* Trust Indicators */}
           
