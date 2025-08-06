@@ -12,7 +12,7 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border shadow-professional">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-transparent">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -21,8 +21,8 @@ const Header = () => {
               <span className="text-primary-foreground font-bold text-sm">GM</span>
             </div>
             <div className="flex flex-col">
-              <span className="font-bold text-lg leading-none text-primary-blue">Goldfields</span>
-              <span className="text-xs text-muted-foreground leading-none">Commercial Mat Hire</span>
+              <span className="font-bold text-lg leading-none text-white">Goldfields</span>
+              <span className="text-xs text-white/80 leading-none">Commercial Mat Hire</span>
             </div>
           </div>
 
@@ -30,25 +30,25 @@ const Header = () => {
           <nav className="hidden md:flex items-center space-x-8">
             <button
               onClick={() => scrollToSection("home")}
-              className="text-foreground hover:text-primary-blue transition-colors"
+              className="text-white hover:text-golden transition-colors"
             >
               Home
             </button>
             <button
               onClick={() => scrollToSection("about")}
-              className="text-foreground hover:text-primary-blue transition-colors"
+              className="text-white hover:text-golden transition-colors"
             >
               About
             </button>
             <button
               onClick={() => scrollToSection("services")}
-              className="text-foreground hover:text-primary-blue transition-colors"
+              className="text-white hover:text-golden transition-colors"
             >
               Services
             </button>
             <button
               onClick={() => scrollToSection("contact")}
-              className="text-foreground hover:text-primary-blue transition-colors"
+              className="text-white hover:text-golden transition-colors"
             >
               Contact
             </button>
@@ -56,7 +56,7 @@ const Header = () => {
 
           {/* Contact Info & CTA */}
           <div className="hidden lg:flex items-center space-x-4">
-            <div className="flex items-center space-x-2 text-sm text-muted-foreground">
+            <div className="flex items-center space-x-2 text-sm text-white/80">
               <Phone className="w-4 h-4" />
               <span>(08) 9021 4000</span>
             </div>
@@ -71,7 +71,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2"
+            className="md:hidden p-2 text-white"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -81,34 +81,34 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border bg-background">
+          <div className="md:hidden py-4 border-t border-white/20 bg-black/80 backdrop-blur-sm">
             <nav className="flex flex-col space-y-4">
               <button
                 onClick={() => scrollToSection("home")}
-                className="text-left text-foreground hover:text-primary-blue transition-colors"
+                className="text-left text-white hover:text-golden transition-colors"
               >
                 Home
               </button>
               <button
                 onClick={() => scrollToSection("about")}
-                className="text-left text-foreground hover:text-primary-blue transition-colors"
+                className="text-left text-white hover:text-golden transition-colors"
               >
                 About
               </button>
               <button
                 onClick={() => scrollToSection("services")}
-                className="text-left text-foreground hover:text-primary-blue transition-colors"
+                className="text-left text-white hover:text-golden transition-colors"
               >
                 Services
               </button>
               <button
                 onClick={() => scrollToSection("contact")}
-                className="text-left text-foreground hover:text-primary-blue transition-colors"
+                className="text-left text-white hover:text-golden transition-colors"
               >
                 Contact
               </button>
-              <div className="pt-4 border-t border-border">
-                <div className="flex items-center space-x-2 text-sm text-muted-foreground mb-3">
+              <div className="pt-4 border-t border-white/20">
+                <div className="flex items-center space-x-2 text-sm text-white/80 mb-3">
                   <Phone className="w-4 h-4" />
                   <span>(08) 9021 4000</span>
                 </div>
