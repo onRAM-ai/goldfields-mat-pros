@@ -1,9 +1,20 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone, Mail } from "lucide-react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      setIsScrolled(scrollTop > 50);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -12,7 +23,11 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-transparent">
+    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      isScrolled 
+        ? 'bg-background/95 backdrop-blur-sm border-b border-border shadow-professional' 
+        : 'bg-transparent'
+    }`}>
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
@@ -21,8 +36,8 @@ const Header = () => {
               <span className="text-primary-foreground font-bold text-sm">GM</span>
             </div>
             <div className="flex flex-col">
-              <span className="font-bold text-lg leading-none text-white">Goldfields</span>
-              <span className="text-xs text-white/80 leading-none">Commercial Mat Hire</span>
+              <span className={`font-bold text-lg leading-none ${isScrolled ? 'text-primary-blue' : 'text-white'}`}>Goldfields</span>
+              <span className={`text-xs leading-none ${isScrolled ? 'text-muted-foreground' : 'text-white/80'}`}>Commercial Mat Hire</span>
             </div>
           </div>
 
@@ -30,25 +45,25 @@ const Header = () => {
           <nav className="hidden md:flex items-center space-x-8">
             <button
               onClick={() => scrollToSection("home")}
-              className="text-white hover:text-golden transition-colors"
+              className={`${isScrolled ? 'text-foreground hover:text-primary-blue' : 'text-white hover:text-golden'} transition-colors`}
             >
               Home
             </button>
             <button
               onClick={() => scrollToSection("about")}
-              className="text-white hover:text-golden transition-colors"
+              className={`${isScrolled ? 'text-foreground hover:text-primary-blue' : 'text-white hover:text-golden'} transition-colors`}
             >
               About
             </button>
             <button
               onClick={() => scrollToSection("services")}
-              className="text-white hover:text-golden transition-colors"
+              className={`${isScrolled ? 'text-foreground hover:text-primary-blue' : 'text-white hover:text-golden'} transition-colors`}
             >
               Services
             </button>
             <button
               onClick={() => scrollToSection("contact")}
-              className="text-white hover:text-golden transition-colors"
+              className={`${isScrolled ? 'text-foreground hover:text-primary-blue' : 'text-white hover:text-golden'} transition-colors`}
             >
               Contact
             </button>
@@ -56,7 +71,7 @@ const Header = () => {
 
           {/* Contact Info & CTA */}
           <div className="hidden lg:flex items-center space-x-4">
-            <div className="flex items-center space-x-2 text-sm text-white/80">
+            <div className={`flex items-center space-x-2 text-sm ${isScrolled ? 'text-muted-foreground' : 'text-white/80'}`}>
               <Phone className="w-4 h-4" />
               <span>(08) 9021 4000</span>
             </div>
@@ -71,7 +86,7 @@ const Header = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 text-white"
+            className={`md:hidden p-2 ${isScrolled ? 'text-foreground' : 'text-white'}`}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
