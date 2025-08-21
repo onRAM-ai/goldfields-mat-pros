@@ -45,7 +45,7 @@ const Contact = () => {
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary-blue mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gradient-primary mb-4">
               Get Your Free Quote Today
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
@@ -58,7 +58,7 @@ const Contact = () => {
             {/* Contact Form */}
             <Card className="shadow-professional">
               <CardHeader>
-                <CardTitle className="text-2xl text-primary-blue flex items-center space-x-2">
+                <CardTitle className="text-2xl text-gradient-primary flex items-center space-x-2">
                   <Send className="w-6 h-6 text-golden" />
                   <span>Request Your Quote</span>
                 </CardTitle>
@@ -115,7 +115,7 @@ const Contact = () => {
               {/* Contact Details */}
               <Card className="shadow-professional">
                 <CardHeader>
-                  <CardTitle className="text-2xl text-primary-blue">Contact Information</CardTitle>
+                  <CardTitle className="text-2xl text-gradient-primary">Contact Information</CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <div className="flex items-start space-x-4">
@@ -123,7 +123,7 @@ const Contact = () => {
                       <Phone className="w-5 h-5 text-professional-black" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-primary-blue mb-1">Phone</h4>
+                      <h4 className="font-semibold text-gradient-primary mb-1">Phone</h4>
                       <p className="text-muted-foreground">(08) 9021 4000</p>
                       <p className="text-sm text-muted-foreground">Available during business hours</p>
                     </div>
@@ -134,7 +134,7 @@ const Contact = () => {
                       <Mail className="w-5 h-5 text-primary-foreground" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-primary-blue mb-1">Email</h4>
+                      <h4 className="font-semibold text-gradient-primary mb-1">Email</h4>
                       <p className="text-muted-foreground">info@goldfieldsmats.com.au</p>
                       <p className="text-sm text-muted-foreground">We respond within 24 hours</p>
                     </div>
@@ -145,7 +145,7 @@ const Contact = () => {
                       <MapPin className="w-5 h-5 text-professional-black" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-primary-blue mb-1">Service Area</h4>
+                      <h4 className="font-semibold text-gradient-primary mb-1">Service Area</h4>
                       <p className="text-muted-foreground">Kalgoorlie and surrounding areas</p>
                       <p className="text-sm text-muted-foreground">Local pickup & delivery</p>
                     </div>
@@ -156,7 +156,7 @@ const Contact = () => {
                       <Clock className="w-5 h-5 text-primary-foreground" />
                     </div>
                     <div>
-                      <h4 className="font-semibold text-primary-blue mb-1">Business Hours</h4>
+                      <h4 className="font-semibold text-gradient-primary mb-1">Business Hours</h4>
                       <div className="text-muted-foreground space-y-1">
                         <p>Monday - Friday: 8:00 AM - 5:00 PM</p>
                         
@@ -170,7 +170,7 @@ const Contact = () => {
               {/* Quick Call-to-Action */}
               <Card className="shadow-professional border-golden/20 bg-gradient-to-br from-background to-golden/5">
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold text-primary-blue mb-3">
+                  <h3 className="text-xl font-bold text-gradient-primary mb-3">
                     Need Immediate Assistance?
                   </h3>
                   <p className="text-muted-foreground mb-4">
@@ -185,7 +185,7 @@ const Contact = () => {
               {/* Service Guarantee */}
               <Card className="shadow-professional">
                 <CardContent className="p-6">
-                  <h3 className="text-lg font-semibold text-primary-blue mb-3">Our Service Promise</h3>
+                  <h3 className="text-lg font-semibold text-gradient-primary mb-3">Our Service Promise</h3>
                   <ul className="space-y-2 text-sm text-muted-foreground">
                     <li className="flex items-center space-x-2">
                       <div className="w-2 h-2 bg-golden rounded-full"></div>

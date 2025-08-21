@@ -15,7 +15,7 @@ const Services = () => {
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary-blue mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gradient-primary mb-4">
               Our Professional Services
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
@@ -32,7 +32,7 @@ const Services = () => {
                 <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
                   <Recycle className="w-8 h-8 text-primary-foreground" />
                 </div>
-                <CardTitle className="text-2xl text-primary-blue">Commercial Mat Hire</CardTitle>
+                <CardTitle className="text-2xl text-gradient-primary">Commercial Mat Hire</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="text-center mb-6">
@@ -75,7 +75,7 @@ const Services = () => {
                 <div className="w-16 h-16 bg-gradient-accent rounded-full flex items-center justify-center mx-auto mb-4">
                   <Sparkles className="w-8 h-8 text-professional-black" />
                 </div>
-                <CardTitle className="text-2xl text-primary-blue">Logo Mat Cleaning</CardTitle>
+                <CardTitle className="text-2xl text-gradient-primary">Logo Mat Cleaning</CardTitle>
               </CardHeader>
               <CardContent className="space-y-4">
                 <div className="text-center mb-6">
@@ -116,7 +116,7 @@ const Services = () => {
           {/* Service Features */}
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h3 className="text-2xl font-bold text-primary-blue mb-6">
+              <h3 className="text-2xl font-bold text-gradient-primary mb-6">
                 Complete Mat Management Solution
               </h3>
               <div className="space-y-6">
@@ -125,7 +125,7 @@ const Services = () => {
                     <DollarSign className="w-4 h-4 text-professional-black" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-primary-blue mb-2">Cost-Effective Solutions</h4>
+                    <h4 className="font-semibold text-gradient-primary mb-2">Cost-Effective Solutions</h4>
                     <p className="text-muted-foreground">
                       Save money on cleaning supplies, labor costs, and floor replacement. 
                       Our affordable weekly rates provide excellent value for businesses of all sizes.
@@ -138,7 +138,7 @@ const Services = () => {
                     <Shield className="w-4 h-4 text-primary-foreground" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-primary-blue mb-2">Safety & Compliance</h4>
+                    <h4 className="font-semibold text-gradient-primary mb-2">Safety & Compliance</h4>
                     <p className="text-muted-foreground">
                       Reduce slip and fall hazards while meeting workplace safety requirements. 
                       Our mats provide excellent traction and debris control.
@@ -151,7 +151,7 @@ const Services = () => {
                     <Sparkles className="w-4 h-4 text-professional-black" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-primary-blue mb-2">Professional Appearance</h4>
+                    <h4 className="font-semibold text-gradient-primary mb-2">Professional Appearance</h4>
                     <p className="text-muted-foreground">
                       Maintain a pristine business image with clean, well-maintained entrance mats. 
                       Perfect for reception areas, lobbies, and high-traffic zones.
@@ -173,7 +173,7 @@ const Services = () => {
 
           {/* Call to Action */}
           <div className="text-center mt-16 p-8 bg-secondary rounded-lg">
-            <h3 className="text-2xl font-bold text-primary-blue mb-4">
+            <h3 className="text-2xl font-bold text-gradient-primary mb-4">
               Ready to Upgrade Your Business Environment?
             </h3>
             <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">

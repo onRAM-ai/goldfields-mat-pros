@@ -13,7 +13,7 @@ const About = () => {
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary-blue mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-gradient-primary mb-4">
               About Goldfields Commercial Floor Mats
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
@@ -26,7 +26,7 @@ const About = () => {
             {/* Content */}
             <div className="space-y-8">
               <div>
-                <h3 className="text-2xl font-bold text-primary-blue mb-4">
+                <h3 className="text-2xl font-bold text-gradient-primary mb-4">
                   Specialized in Commercial Floor Mat Solutions
                 </h3>
                 <p className="text-muted-foreground mb-6">
@@ -45,21 +45,21 @@ const About = () => {
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center p-4 bg-background rounded-lg shadow-sm">
                   <MapPin className="w-8 h-8 text-golden mx-auto mb-2" />
-                  <div className="text-2xl font-bold text-primary-blue">Local</div>
+                  <div className="text-2xl font-bold text-gradient-primary">Local</div>
                   <div className="text-sm text-muted-foreground">Kalgoorlie Based</div>
                 </div>
                 
                 
                 <div className="text-center p-4 bg-background rounded-lg shadow-sm">
                   <Award className="w-8 h-8 text-golden mx-auto mb-2" />
-                  <div className="text-2xl font-bold text-primary-blue">5★</div>
+                  <div className="text-2xl font-bold text-gradient-primary">5★</div>
                   <div className="text-sm text-muted-foreground">Service Rating</div>
                 </div>
               </div>
 
               {/* Value Propositions */}
               <div className="space-y-4">
-                <h4 className="text-xl font-semibold text-primary-blue">Why Choose Us?</h4>
+                <h4 className="text-xl font-semibold text-gradient-primary">Why Choose Us?</h4>
                 <div className="space-y-3">
                   <div className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-golden rounded-full mt-2 flex-shrink-0"></div>

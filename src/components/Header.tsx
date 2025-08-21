@@ -36,7 +36,7 @@ const Header = () => {
               <span className="text-primary-foreground font-bold text-sm">GM</span>
             </div>
             <div className="flex flex-col">
-              <span className={`font-bold text-lg leading-none ${isScrolled ? 'text-primary-blue' : 'text-white'}`}>Goldfields</span>
+              <span className={`font-bold text-lg leading-none ${isScrolled ? 'text-gradient-primary' : 'text-white'}`}>Goldfields</span>
               <span className={`text-xs leading-none ${isScrolled ? 'text-muted-foreground' : 'text-white/80'}`}>Commercial Mat Hire</span>
             </div>
           </div>

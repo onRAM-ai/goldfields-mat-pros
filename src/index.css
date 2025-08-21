@@ -37,9 +37,9 @@ All colors MUST be HSL.
     --ring: 194 100% 35%;
 
     /* Custom design tokens */
-    --primary-blue: 194 100% 35%;
-    --primary-blue-light: 194 100% 45%;
-    --primary-blue-deep: 202 100% 30%;
+    --primary-blue: 194 100% 47%;
+    --primary-blue-light: 194 100% 57%;
+    --primary-blue-deep: 202 100% 37%;
     --golden-yellow: 45 93% 58%;
     --golden-yellow-light: 45 93% 68%;
     --professional-black: 220 13% 13%;
@@ -47,7 +47,7 @@ All colors MUST be HSL.
     --hero-bg: 0 0% 4%;
     
     /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(194 100% 35%), hsl(202 100% 30%));
+    --gradient-primary: linear-gradient(135deg, hsl(194 100% 47%), hsl(202 100% 37%));
     --gradient-accent: linear-gradient(135deg, hsl(45 93% 58%), hsl(45 93% 68%));
     --gradient-hero: linear-gradient(135deg, hsl(var(--hero-bg)), hsl(var(--primary-blue-deep) / 0.3));
     
@@ -123,5 +123,11 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .text-gradient-primary {
+    @apply bg-gradient-primary bg-clip-text text-transparent;
   }
 }
