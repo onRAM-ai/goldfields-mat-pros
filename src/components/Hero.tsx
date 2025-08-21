@@ -8,11 +8,11 @@ const Hero = () => {
       behavior: "smooth"
     });
   };
-  return <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+  return <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-hero-bg">
       {/* Background Image */}
       <div className="absolute inset-0">
-        <img src={heroImage} alt="Professional office entrance" className="w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-900/90 via-slate-800/95 to-slate-900/90"></div>
+        <img src={heroImage} alt="Professional office entrance" className="w-full h-full object-cover opacity-20" />
+        <div className="absolute inset-0 bg-gradient-hero"></div>
       </div>
 
       {/* Content */}

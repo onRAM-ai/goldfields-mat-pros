@@ -61,6 +61,9 @@ export default {
 				professional: {
 					black: 'hsl(var(--professional-black))'
 				},
+				hero: {
+					bg: 'hsl(var(--hero-bg))'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
