@@ -104,6 +104,15 @@ const Footer = () => {
               <span>Proudly serving Kalgoorlie businesses</span>
               <span className="hidden md:inline">•</span>
               <span>Professional • Reliable • Local</span>
+              <span className="hidden md:inline">•</span>
+              <a 
+                href="https://rughubkal.com.au" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:text-golden transition-colors"
+              >
+                Partnered with Rughub
+              </a>
             </div>
           </div>
         </div>
