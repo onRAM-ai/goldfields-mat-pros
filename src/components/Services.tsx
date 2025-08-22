@@ -115,8 +115,8 @@ const Services = () => {
             {/* New Mats for Sale */}
             <Card className="border-border shadow-professional hover:shadow-golden transition-all duration-300">
               <CardHeader className="text-center">
-                <div className="w-16 h-16 bg-golden rounded-full flex items-center justify-center mx-auto mb-4">
-                  <ShoppingBag className="w-8 h-8 text-professional-black" />
+                <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                  <ShoppingBag className="w-8 h-8 text-primary-foreground" />
                 </div>
                 <CardTitle className="text-2xl text-gradient-primary">New Mats for Sale</CardTitle>
               </CardHeader>
