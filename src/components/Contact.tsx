@@ -124,7 +124,7 @@ const Contact = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-gradient-primary mb-1">Phone</h4>
-                      <p className="text-muted-foreground">(08) 9021 4000</p>
+                      <p className="text-muted-foreground">0435 808 804</p>
                       <p className="text-sm text-muted-foreground">Available during business hours</p>
                     </div>
                   </div>
@@ -176,8 +176,8 @@ const Contact = () => {
                   <p className="text-muted-foreground mb-4">
                     Speak directly with our team for urgent requirements or immediate quotes.
                   </p>
-                  <Button variant="professional" size="lg" className="w-full" onClick={() => window.open("tel:+61890214000", "_self")}>
-                    Call Now: (08) 9021 4000
+                  <Button variant="professional" size="lg" className="w-full" onClick={() => window.open("tel:+61435808804", "_self")}>
+                    Call Now: 0435 808 804
                   </Button>
                 </CardContent>
               </Card>

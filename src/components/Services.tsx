@@ -191,9 +191,9 @@ const Services = () => {
               <Button
                 variant="outline"
                 size="lg"
-                onClick={() => window.open("tel:+61890214000", "_self")}
+                onClick={() => window.open("tel:+61435808804", "_self")}
               >
-                Call (08) 9021 4000
+                Call 0435 808 804
               </Button>
             </div>
           </div>

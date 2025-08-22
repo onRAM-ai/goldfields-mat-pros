@@ -73,7 +73,7 @@ const Header = () => {
           <div className="hidden lg:flex items-center space-x-4">
             <div className={`flex items-center space-x-2 text-sm ${isScrolled ? 'text-muted-foreground' : 'text-white/80'}`}>
               <Phone className="w-4 h-4" />
-              <span>(08) 9021 4000</span>
+              <span>0435 808 804</span>
             </div>
             <Button
               variant="golden"
@@ -125,7 +125,7 @@ const Header = () => {
               <div className="pt-4 border-t border-white/20">
                 <div className="flex items-center space-x-2 text-sm text-white/80 mb-3">
                   <Phone className="w-4 h-4" />
-                  <span>(08) 9021 4000</span>
+                  <span>0435 808 804</span>
                 </div>
                 <Button
                   variant="golden"
