@@ -27,36 +27,38 @@ const Services = () => {
           {/* Main Services */}
           <div className="grid lg:grid-cols-3 gap-8 mb-16">
             {/* Mat Hire Service */}
-            <Card className="border-border shadow-professional hover:shadow-golden transition-all duration-300">
+            <Card className="border-border shadow-professional hover:shadow-golden transition-all duration-300 flex flex-col">
               <CardHeader className="text-center">
                 <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
                   <Recycle className="w-8 h-8 text-primary-foreground" />
                 </div>
                 <CardTitle className="text-2xl text-gradient-primary">Commercial Mat Hire</CardTitle>
               </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="text-center mb-6">
-                  <div className="text-3xl font-bold text-golden">$7.77</div>
-                  <div className="text-muted-foreground">per week</div>
+              <CardContent className="space-y-4 flex-1 flex flex-col">
+                <div className="flex-1">
+                  <div className="text-center mb-6">
+                    <div className="text-3xl font-bold text-golden">$7.77</div>
+                    <div className="text-muted-foreground">per week</div>
+                  </div>
+                  <ul className="space-y-3">
+                    <li className="flex items-start space-x-3">
+                      <Shield className="w-5 h-5 text-golden mt-0.5 flex-shrink-0" />
+                      <span className="text-muted-foreground">High-quality commercial floor mats</span>
+                    </li>
+                    <li className="flex items-start space-x-3">
+                      <Truck className="w-5 h-5 text-golden mt-0.5 flex-shrink-0" />
+                      <span className="text-muted-foreground">Regular pickup and delivery service</span>
+                    </li>
+                    <li className="flex items-start space-x-3">
+                      <Calendar className="w-5 h-5 text-golden mt-0.5 flex-shrink-0" />
+                      <span className="text-muted-foreground">Flexible scheduling to suit your business</span>
+                    </li>
+                    <li className="flex items-start space-x-3">
+                      <Sparkles className="w-5 h-5 text-golden mt-0.5 flex-shrink-0" />
+                      <span className="text-muted-foreground">Professional cleaning included</span>
+                    </li>
+                  </ul>
                 </div>
-                <ul className="space-y-3">
-                  <li className="flex items-start space-x-3">
-                    <Shield className="w-5 h-5 text-golden mt-0.5 flex-shrink-0" />
-                    <span className="text-muted-foreground">High-quality commercial floor mats</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <Truck className="w-5 h-5 text-golden mt-0.5 flex-shrink-0" />
-                    <span className="text-muted-foreground">Regular pickup and delivery service</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <Calendar className="w-5 h-5 text-golden mt-0.5 flex-shrink-0" />
-                    <span className="text-muted-foreground">Flexible scheduling to suit your business</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <Sparkles className="w-5 h-5 text-golden mt-0.5 flex-shrink-0" />
-                    <span className="text-muted-foreground">Professional cleaning included</span>
-                  </li>
-                </ul>
                 <div className="pt-4">
                   <Button
                     variant="professional"
@@ -70,36 +72,38 @@ const Services = () => {
             </Card>
 
             {/* Logo Mat Cleaning */}
-            <Card className="border-border shadow-professional hover:shadow-golden transition-all duration-300">
+            <Card className="border-border shadow-professional hover:shadow-golden transition-all duration-300 flex flex-col">
               <CardHeader className="text-center">
                 <div className="w-16 h-16 bg-gradient-accent rounded-full flex items-center justify-center mx-auto mb-4">
                   <Sparkles className="w-8 h-8 text-professional-black" />
                 </div>
                 <CardTitle className="text-2xl text-gradient-primary">Logo Mat Cleaning</CardTitle>
               </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="text-center mb-6">
-                  <div className="text-3xl font-bold text-golden">$66</div>
-                  <div className="text-muted-foreground">starting price</div>
+              <CardContent className="space-y-4 flex-1 flex flex-col">
+                <div className="flex-1">
+                  <div className="text-center mb-6">
+                    <div className="text-3xl font-bold text-golden">$66</div>
+                    <div className="text-muted-foreground">starting price</div>
+                  </div>
+                  <ul className="space-y-3">
+                    <li className="flex items-start space-x-3">
+                      <Sparkles className="w-5 h-5 text-golden mt-0.5 flex-shrink-0" />
+                      <span className="text-muted-foreground">Professional deep cleaning service</span>
+                    </li>
+                    <li className="flex items-start space-x-3">
+                      <Shield className="w-5 h-5 text-golden mt-0.5 flex-shrink-0" />
+                      <span className="text-muted-foreground">Logo preservation and color restoration</span>
+                    </li>
+                    <li className="flex items-start space-x-3">
+                      <Truck className="w-5 h-5 text-golden mt-0.5 flex-shrink-0" />
+                      <span className="text-muted-foreground">Pickup and delivery included</span>
+                    </li>
+                    <li className="flex items-start space-x-3">
+                      <Calendar className="w-5 h-5 text-golden mt-0.5 flex-shrink-0" />
+                      <span className="text-muted-foreground">Quick turnaround time</span>
+                    </li>
+                  </ul>
                 </div>
-                <ul className="space-y-3">
-                  <li className="flex items-start space-x-3">
-                    <Sparkles className="w-5 h-5 text-golden mt-0.5 flex-shrink-0" />
-                    <span className="text-muted-foreground">Professional deep cleaning service</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <Shield className="w-5 h-5 text-golden mt-0.5 flex-shrink-0" />
-                    <span className="text-muted-foreground">Logo preservation and color restoration</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <Truck className="w-5 h-5 text-golden mt-0.5 flex-shrink-0" />
-                    <span className="text-muted-foreground">Pickup and delivery included</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <Calendar className="w-5 h-5 text-golden mt-0.5 flex-shrink-0" />
-                    <span className="text-muted-foreground">Quick turnaround time</span>
-                  </li>
-                </ul>
                 <div className="pt-4">
                   <Button
                     variant="golden"
@@ -113,36 +117,38 @@ const Services = () => {
             </Card>
 
             {/* New Mats for Sale */}
-            <Card className="border-border shadow-professional hover:shadow-golden transition-all duration-300">
+            <Card className="border-border shadow-professional hover:shadow-golden transition-all duration-300 flex flex-col">
               <CardHeader className="text-center">
                 <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
                   <ShoppingBag className="w-8 h-8 text-primary-foreground" />
                 </div>
                 <CardTitle className="text-2xl text-gradient-primary">New Mats for Sale</CardTitle>
               </CardHeader>
-              <CardContent className="space-y-4">
-                <div className="text-center mb-6">
-                  <div className="text-3xl font-bold text-golden">From $190</div>
-                  <div className="text-muted-foreground">purchase price</div>
+              <CardContent className="space-y-4 flex-1 flex flex-col">
+                <div className="flex-1">
+                  <div className="text-center mb-6">
+                    <div className="text-3xl font-bold text-golden">From $190</div>
+                    <div className="text-muted-foreground">purchase price</div>
+                  </div>
+                  <ul className="space-y-3">
+                    <li className="flex items-start space-x-3">
+                      <Shield className="w-5 h-5 text-golden mt-0.5 flex-shrink-0" />
+                      <span className="text-muted-foreground">Brand new commercial quality mats</span>
+                    </li>
+                    <li className="flex items-start space-x-3">
+                      <DollarSign className="w-5 h-5 text-golden mt-0.5 flex-shrink-0" />
+                      <span className="text-muted-foreground">1150 x 2000mm - $330</span>
+                    </li>
+                    <li className="flex items-start space-x-3">
+                      <DollarSign className="w-5 h-5 text-golden mt-0.5 flex-shrink-0" />
+                      <span className="text-muted-foreground">850 x 3000mm - $385</span>
+                    </li>
+                    <li className="flex items-start space-x-3">
+                      <Truck className="w-5 h-5 text-golden mt-0.5 flex-shrink-0" />
+                      <span className="text-muted-foreground">Delivery available</span>
+                    </li>
+                  </ul>
                 </div>
-                <ul className="space-y-3">
-                  <li className="flex items-start space-x-3">
-                    <Shield className="w-5 h-5 text-golden mt-0.5 flex-shrink-0" />
-                    <span className="text-muted-foreground">Brand new commercial quality mats</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <DollarSign className="w-5 h-5 text-golden mt-0.5 flex-shrink-0" />
-                    <span className="text-muted-foreground">1150 x 2000mm - $330</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <DollarSign className="w-5 h-5 text-golden mt-0.5 flex-shrink-0" />
-                    <span className="text-muted-foreground">850 x 3000mm - $385</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <Truck className="w-5 h-5 text-golden mt-0.5 flex-shrink-0" />
-                    <span className="text-muted-foreground">Delivery available</span>
-                  </li>
-                </ul>
                 <div className="pt-4">
                   <Button
                     variant="professional"
