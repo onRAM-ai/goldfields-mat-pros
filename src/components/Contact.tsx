@@ -103,9 +103,7 @@ const Contact = () => {
                     <Textarea id="message" name="message" value={formData.message} onChange={handleChange} placeholder="Tell us about your requirements, location size, current challenges, etc." rows={4} />
                   </div>
 
-                  <Button type="submit" variant="golden" size="lg" className="w-full">
-                    Send Quote Request
-                  </Button>
+                  <Button type="submit" variant="golden" size="lg" className="w-full">Send</Button>
                 </form>
               </CardContent>
             </Card>
