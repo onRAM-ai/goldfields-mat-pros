@@ -127,7 +127,7 @@ const Services = () => {
               <CardContent className="space-y-4 flex-1 flex flex-col">
                 <div className="flex-1">
                   <div className="text-center mb-6">
-                    <div className="text-3xl font-bold text-golden">From $190</div>
+                    <div className="text-3xl font-bold text-golden">$190</div>
                     <div className="text-muted-foreground">purchase price</div>
                   </div>
                   <ul className="space-y-3">
