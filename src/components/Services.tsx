@@ -145,7 +145,7 @@ const Services = () => {
                 </ul>
                 <div className="pt-4">
                   <Button
-                    variant="golden"
+                    variant="professional"
                     className="w-full"
                     onClick={() => scrollToSection("contact")}
                   >
