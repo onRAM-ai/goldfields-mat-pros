@@ -93,8 +93,6 @@ const Contact = () => {
                       <option value="">Select a service</option>
                       <option value="mat-hire">Commercial Mat Hire</option>
                       <option value="logo-cleaning">Logo Mat Cleaning</option>
-                      <option value="both">Both Services</option>
-                      <option value="consultation">Free Consultation</option>
                     </select>
                   </div>
 
