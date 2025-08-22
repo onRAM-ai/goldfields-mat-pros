@@ -79,16 +79,16 @@ const Footer = () => {
             <h3 className="font-semibold text-lg mb-4">Our Services</h3>
             <div className="space-y-3">
               <div className="text-primary-foreground/80">
-                <div className="font-medium">Mat Hire</div>
+                <div className="font-medium">Commercial Mat Hire</div>
                 <div className="text-sm text-golden">From $7.77/week</div>
               </div>
               <div className="text-primary-foreground/80">
-                <div className="font-medium">Logo Cleaning</div>
+                <div className="font-medium">Logo Mat Cleaning</div>
                 <div className="text-sm text-golden">From $66</div>
               </div>
               <div className="text-primary-foreground/80">
-                <div className="font-medium">Free Consultation</div>
-                <div className="text-sm text-primary-foreground/60">Available</div>
+                <div className="font-medium">Mats for Sale</div>
+                <div className="text-sm text-golden">Contact for pricing</div>
               </div>
             </div>
           </div>
