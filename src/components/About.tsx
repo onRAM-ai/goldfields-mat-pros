@@ -27,7 +27,7 @@ const About = () => {
             <div className="space-y-8">
               <div>
                 <h3 className="text-2xl font-bold text-gradient-primary mb-4">
-                  Specialized in Commercial Floor Mat Solutions
+                  Specialised in Commercial Floor Mat Solutions
                 </h3>
                 <p className="text-muted-foreground mb-6">
                   We understand that first impressions matter. Our commercial floor mat hire and 

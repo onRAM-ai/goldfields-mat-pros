@@ -176,7 +176,7 @@ const Services = () => {
                   <div>
                     <h4 className="font-semibold text-gradient-primary mb-2">Cost-Effective Solutions</h4>
                     <p className="text-muted-foreground">
-                      Save money on cleaning supplies, labor costs, and floor replacement. 
+                      Save money on cleaning supplies, labour costs, and floor replacement. 
                       Our affordable weekly rates provide excellent value for businesses of all sizes.
                     </p>
                   </div>
