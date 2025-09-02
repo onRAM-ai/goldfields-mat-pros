@@ -106,7 +106,7 @@ const Footer = () => {
               <span>Professional • Reliable • Local</span>
               <span className="hidden md:inline">•</span>
               <a 
-                href="https://rughubkal.com.au" 
+                href="https://www.rughubkal.com.au/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="hover:text-golden transition-colors"
