@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -7,32 +7,143 @@ import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
 import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
 const Contact = () => {
-  const {
-    toast
-  } = useToast();
+  const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
     business: "",
     service: "",
-    message: ""
+    message: "",
+    // Honeypot fields - hidden from users but bots will fill them
+    website: "",
+    company_url: "",
+    address_line_2: ""
   });
-  const handleSubmit = (e: React.FormEvent) => {
+  
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [cooldownRemaining, setCooldownRemaining] = useState(0);
+  const [formStartTime, setFormStartTime] = useState<number>(0);
+
+  // Track when user starts interacting with the form
+  useEffect(() => {
+    setFormStartTime(Date.now());
+    
+    // Check for existing cooldown on component mount
+    const lastSubmission = localStorage.getItem('lastSubmissionTime');
+    if (lastSubmission) {
+      const timeSinceLastSubmission = Date.now() - parseInt(lastSubmission);
+      const cooldownTime = 30000; // 30 seconds
+      
+      if (timeSinceLastSubmission < cooldownTime) {
+        const remaining = Math.ceil((cooldownTime - timeSinceLastSubmission) / 1000);
+        setCooldownRemaining(remaining);
+        
+        // Start countdown
+        const interval = setInterval(() => {
+          setCooldownRemaining(prev => {
+            if (prev <= 1) {
+              clearInterval(interval);
+              return 0;
+            }
+            return prev - 1;
+          });
+        }, 1000);
+        
+        return () => clearInterval(interval);
+      }
+    }
+  }, []);
+
+  const validateSubmission = (): { isValid: boolean; message?: string } => {
+    // Check honeypot fields
+    if (formData.website || formData.company_url || formData.address_line_2) {
+      return { isValid: false, message: "Spam detected" };
+    }
+
+    // Check minimum time (prevent bots that submit too quickly)
+    const interactionTime = Date.now() - formStartTime;
+    if (interactionTime < 3000) { // 3 seconds minimum
+      return { isValid: false, message: "Please take more time to fill out the form" };
+    }
+
+    // Check rate limiting
+    const lastSubmission = localStorage.getItem('lastSubmissionTime');
+    if (lastSubmission) {
+      const timeSinceLastSubmission = Date.now() - parseInt(lastSubmission);
+      if (timeSinceLastSubmission < 30000) { // 30 seconds
+        const remainingSeconds = Math.ceil((30000 - timeSinceLastSubmission) / 1000);
+        return { 
+          isValid: false, 
+          message: `Please wait ${remainingSeconds} seconds before submitting again` 
+        };
+      }
+    }
+
+    // Basic email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      return { isValid: false, message: "Please enter a valid email address" };
+    }
+
+    return { isValid: true };
+  };
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // In a real app, this would submit to a backend
-    toast({
-      title: "Quote Request Sent!",
-      description: "We'll contact you within 24 hours with your custom quote."
-    });
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      business: "",
-      service: "",
-      message: ""
-    });
+    
+    if (isSubmitting || cooldownRemaining > 0) return;
+    
+    const validation = validateSubmission();
+    if (!validation.isValid) {
+      if (validation.message !== "Spam detected") {
+        // Only show error for legitimate validation issues, silently reject spam
+        toast({
+          title: "Submission Error",
+          description: validation.message,
+          variant: "destructive"
+        });
+      }
+      return;
+    }
+
+    setIsSubmitting(true);
+    
+    try {
+      // Simulate API call delay
+      await new Promise(resolve => setTimeout(resolve, 1000));
+      
+      // Record submission time for rate limiting
+      localStorage.setItem('lastSubmissionTime', Date.now().toString());
+      
+      toast({
+        title: "Quote Request Sent!",
+        description: "We'll contact you within 24 hours with your custom quote."
+      });
+      
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        business: "",
+        service: "",
+        message: "",
+        website: "",
+        company_url: "",
+        address_line_2: ""
+      });
+      
+      // Reset form start time for new interaction
+      setFormStartTime(Date.now());
+      
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to send quote request. Please try again.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
@@ -102,7 +213,43 @@ const Contact = () => {
                     <Textarea id="message" name="message" value={formData.message} onChange={handleChange} placeholder="Tell us about your requirements, location size, current challenges, etc." rows={4} />
                   </div>
 
-                  <Button type="submit" variant="golden" size="lg" className="w-full">Send</Button>
+                  {/* Honeypot fields - hidden from users, bots will fill them */}
+                  <div style={{ position: 'absolute', left: '-9999px', opacity: 0, pointerEvents: 'none' }}>
+                    <input
+                      type="text"
+                      name="website"
+                      value={formData.website}
+                      onChange={handleChange}
+                      tabIndex={-1}
+                      autoComplete="off"
+                    />
+                    <input
+                      type="url"
+                      name="company_url"
+                      value={formData.company_url}
+                      onChange={handleChange}
+                      tabIndex={-1}
+                      autoComplete="off"
+                    />
+                    <input
+                      type="text"
+                      name="address_line_2"
+                      value={formData.address_line_2}
+                      onChange={handleChange}
+                      tabIndex={-1}
+                      autoComplete="off"
+                    />
+                  </div>
+
+                  <Button 
+                    type="submit" 
+                    variant="golden" 
+                    size="lg" 
+                    className="w-full"
+                    disabled={isSubmitting || cooldownRemaining > 0}
+                  >
+                    {isSubmitting ? "Sending..." : cooldownRemaining > 0 ? `Wait ${cooldownRemaining}s` : "Send Quote Request"}
+                  </Button>
                 </form>
               </CardContent>
             </Card>
