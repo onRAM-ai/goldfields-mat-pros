@@ -1,15 +1,13 @@
 import { Phone, Mail, MapPin } from "lucide-react";
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
-    element?.scrollIntoView({ behavior: "smooth" });
+    element?.scrollIntoView({
+      behavior: "smooth"
+    });
   };
-
-  return (
-    <footer className="bg-primary-blue text-primary-foreground">
+  return <footer className="bg-primary-blue text-primary-foreground">
       <div className="container mx-auto px-4 py-12">
         <div className="grid md:grid-cols-4 gap-8">
           {/* Company Info */}
@@ -38,7 +36,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-4 h-4 text-golden" />
-                <span className="text-primary-foreground/90">Kalgoorlie, Western Australia</span>
+                <span className="text-primary-foreground/90">186A Dugan Street, Kalgoorlie, WA</span>
               </div>
             </div>
           </div>
@@ -47,28 +45,16 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold text-lg mb-4">Quick Links</h3>
             <nav className="space-y-3">
-              <button
-                onClick={() => scrollToSection("home")}
-                className="block text-primary-foreground/80 hover:text-golden transition-colors"
-              >
+              <button onClick={() => scrollToSection("home")} className="block text-primary-foreground/80 hover:text-golden transition-colors">
                 Home
               </button>
-              <button
-                onClick={() => scrollToSection("about")}
-                className="block text-primary-foreground/80 hover:text-golden transition-colors"
-              >
+              <button onClick={() => scrollToSection("about")} className="block text-primary-foreground/80 hover:text-golden transition-colors">
                 About
               </button>
-              <button
-                onClick={() => scrollToSection("services")}
-                className="block text-primary-foreground/80 hover:text-golden transition-colors"
-              >
+              <button onClick={() => scrollToSection("services")} className="block text-primary-foreground/80 hover:text-golden transition-colors">
                 Services
               </button>
-              <button
-                onClick={() => scrollToSection("contact")}
-                className="block text-primary-foreground/80 hover:text-golden transition-colors"
-              >
+              <button onClick={() => scrollToSection("contact")} className="block text-primary-foreground/80 hover:text-golden transition-colors">
                 Contact
               </button>
             </nav>
@@ -105,20 +91,13 @@ const Footer = () => {
               <span className="hidden md:inline">•</span>
               <span>Professional • Reliable • Local</span>
               <span className="hidden md:inline">•</span>
-              <a 
-                href="https://www.rughubkal.com.au/" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="hover:text-golden transition-colors"
-              >
+              <a href="https://www.rughubkal.com.au/" target="_blank" rel="noopener noreferrer" className="hover:text-golden transition-colors">
                 Partnered with Rughub
               </a>
             </div>
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
