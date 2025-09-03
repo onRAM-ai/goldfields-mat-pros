@@ -233,7 +233,7 @@ const Contact = () => {
                   </div>
 
                   <Button type="submit" variant="golden" size="lg" className="w-full" disabled={isSubmitting || cooldownRemaining > 0}>
-                    {isSubmitting ? "Sending..." : cooldownRemaining > 0 ? `Wait ${cooldownRemaining}s` : "Send Quote Request"}
+                    Submit
                   </Button>
                 </form>
               </CardContent>
