@@ -119,8 +119,27 @@ const Contact = () => {
     }
     setIsSubmitting(true);
     try {
-      // Simulate API call delay
-      await new Promise(resolve => setTimeout(resolve, 1000));
+      // Send form data to API route
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          business: formData.business,
+          service: formData.service,
+          message: formData.message,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Failed to send email');
+      }
 
       // Record submission time for rate limiting
       localStorage.setItem('lastSubmissionTime', Date.now().toString());
